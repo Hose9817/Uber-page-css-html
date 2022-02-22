@@ -1,0 +1,219 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    position: relative;
+    height: 50px;
+}
+
+ nav {
+    height: 50px;
+    background: #212121;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 70px;
+    margin: 0;
+    list-style-type: none;
+}
+
+.menu .menu_link {
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 15px;
+    color: #FFFFFF;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.menu .menu_item {
+    border-right: 2px dotted black;
+    padding-right: 44px;
+}
+
+.subheader {
+    position: absolute;
+    top: 50px;
+    height: 87px;
+    background: rgba(0, 0, 0, .6);
+    width: 100%;
+}
+
+.subheader .subheader_logo {
+    display: block;
+    max-width: 100%;
+    margin-top: 19px;
+}
+
+.subheader .subheader_official {
+    margin-top: 5px;
+    font-weight: 100;
+    font-size: 13px;
+    color: #FFFFFF;
+}
+
+.subheader_call {
+    margin-top: 20px;
+    font-weight: 300;
+    font-size: 12px;
+    color: #FFFFFF;
+    text-align: right;
+}
+
+.subheader_phone {
+    display: block;
+    margin-top: 4px;
+    font-weight: normal;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-align: right;
+    text-decoration: none;
+}
+
+.subheader_phone:hover {
+    text-decoration: underline;
+    color: #FFFFFF;
+}
+
+.subheader .subheader_btn {
+    margin-top: 19px;
+    width: 172px;
+    height: 46px;
+    background-image: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%);
+    box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    border: none;
+
+    font-weight: normal;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21);
+}
+
+.promo {
+    min-height: 800px;
+    background: url("../image/uber_bg.png") center center/cover no-repeat;
+    padding: 155px 0 186px 0;
+}
+
+.promo .promo_header {
+    font-weight: 700;
+    font-size: 60px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    line-height: 60px;
+    margin: 0;
+    text-align: center;
+}
+
+.promo .promo_subheader {
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-size: 36px;
+    line-height: 36px;
+    margin: 0;
+    text-align: center;
+    margin-top: 23px;
+}
+
+.promo .description {
+    margin-top: 16px;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.promo .promo_btn {
+    display: block;
+    margin: 115px auto 0 auto;
+    width: 259px;
+    height: 63px;
+    background: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%);
+    box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    border: none;
+
+    font-weight: normal;
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21);
+}
+
+.reasons {
+    padding: 20px 0 64px 0;
+}
+
+.label {
+    margin: 0 auto;
+    width: 115px;
+    height: 27px;
+    padding: 5px 12px;
+    background-color: #000000;
+
+    font-weight: 300;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.title {
+    margin-top: 32px;
+    margin-bottom: 0;
+    font-weight: 700;
+    font-size: 38px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #222222;
+}
+
+.reasons .reason_block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.reasons .reason_block .reason_round {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 116px;
+    height: 116px;
+    border-radius: 100%;
+    background: #1EACC7;
+    margin-right: 25px;
+}
+
+.reasons .reason_block .reason_descr {
+    width: 343px;
+}
+
+.reasons .reason_block .reason_descr .reason_subtitle {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    color: #1EACC7;
+}
+
+.reason .reason_block .reason_descr .reason_text {
+   line-height: 21px;
+    font-weight: 300;
+    font-size: 15px;
+    color: black;
+}
