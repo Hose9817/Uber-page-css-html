@@ -315,6 +315,8 @@ nav {
   display: block;
   margin: 55px auto 0 auto;
   z-index: 2;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 .choice_descr {
   font-weight: 300;
