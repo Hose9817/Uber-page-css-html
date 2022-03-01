@@ -1,9 +1,15 @@
-$var1: #212121
-$var2: #ffffff
-$var3: #000000
-$var4: #222222
-$var5: #1eacc7
-$var6: #202020
+$var1: #212121 //gray
+$var2: #ffffff //white
+$var3: #000000 //black
+$var4: #222222 //dark-gray
+$var5: #1eacc7 //blue-turk
+$var6: #202020 // dark-gray-2
+$var7: #FF5656 //peach-color
+
+@mixin btn_hover
+  &:hover
+    background-image: none
+    background-color: $var5
 
 *
   font-family: 'Roboto', sans-serif
@@ -25,12 +31,11 @@ nav
   padding: 13px 70px
   margin: 0
   list-style-type: none
-  .menu_link
+  &_link
     color: $var2
     font-size: 15px
     font-weight: 300
-
-  .menu_item
+  &_item
     border-right: 2px dotted black
     padding-right: 28px
 
@@ -41,26 +46,26 @@ nav
   width: 100%
   height: 84px
   background-color: rgba(0,0,0, .6)
-  .subheader_logo
+  &_logo
     display: block
     max-width: 100%
     margin-top: 16px
 
-  .subheader_official
+  &_official
     margin-top: 6px
     opacity: 0.5
     color: $var2
     font-size: 13px
     font-weight: 400
 
-  .subheader_call
+  &_call
     color: $var2
     font-size: 12px
     font-weight: 300
     margin-top: 19px
     text-align: right
 
-  .subheader_phone
+  &_phone
     display: block
     margin-top: 8px
     color: $var2
@@ -70,7 +75,7 @@ nav
     text-align: right
     line-height: 12px
 
-  .subheader_btn
+  &_btn
     margin-top: 19px
     width: 172px
     height: 46px
@@ -83,30 +88,30 @@ nav
     font-size: 14px
     font-weight: 400
     text-transform: uppercase
+    @include btn_hover
 
 
 .promo
   min-height: 800px
   background: url('../image/uber_bg.png') center center / cover no-repeat
   padding: 150px 0 135px 0
-.promo_header
-  color: $var2
-  font-weight: 700
-  text-transform: uppercase
-  font-size: 60px
-  line-height: 60px
-  margin: 0
-  text-align: center
-
-.promo_subheader
-  color: $var2
-  font-weight: 700
-  text-transform: uppercase
-  font-size: 36px
-  line-height: 36px
-  margin: 0
-  margin-top: 22px
-  text-align: center
+  &_header
+    color: $var2
+    font-weight: 700
+    text-transform: uppercase
+    font-size: 60px
+    line-height: 60px
+    margin: 0
+    text-align: center
+  &_subheader
+    color: $var2
+    font-weight: 700
+    text-transform: uppercase
+    font-size: 36px
+    line-height: 36px
+    margin: 0
+    margin-top: 22px
+    text-align: center
 
 .description
   color: $var2
@@ -130,38 +135,39 @@ nav
   font-size: 18px
   font-weight: 400
   text-transform: uppercase
+  +btn_hover
 
 
 .reasons
   padding: 71px 0 65px 0
-  .reason_block
+  &_block
     display: flex
     justify-content: center
     align-items: center
     margin-top: 35px
-    .reason_round
-      display: flex
-      justify-content: center
-      align-items: center
-      margin-right: 26px
-      width: 113px
-      height: 113px
-      background-color: $var5
-      border-radius: 100%
+  &_round
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-right: 26px
+    width: 113px
+    height: 113px
+    background-color: $var5
+    border-radius: 100%
 
-    .reason_descr
-      width: 343px
-      .reason_subtitle
-        line-height: 21px
-        color: $var5
-        font-size: 17px
-        font-weight: 400
+  &_descr
+    width: 370px
+    .reasons_subtitle
+      line-height: 21px
+      color: $var5
+      font-size: 17px
+      font-weight: 400
 
-      .reason_text
-        color: $var6
-        font-size: 15px
-        font-weight: 300
-        line-height: 21px
+    .reasons_text
+      color: $var6
+      font-size: 15px
+      font-weight: 300
+      line-height: 21px
 
 
 
@@ -255,10 +261,31 @@ nav
       margin: 0 auto
       padding: 6px
       cursor: pointer
+      &:before
+        content: ''
+        display: block
+        width: 14px
+        height: 2px
+        background-color: $var5
+        transition: 0.3s all
+      &:after
+        content: ''
+        position: absolute
+        left: 50%
+        display: block
+        height: 14px
+        width: 2px
+        background-color: $var5
+        transform: translateX(-50%)
+        transition: 0.3s all
+      &:hover
+        &:before, &:after
+          background-color: darkblue
+
 
 .choice
   min-height: 898px
-  background: url("../image/Car_bg_btm.png") center center / cover no-repeat
+  background: url("../image/mobile_bg.png") center center / cover no-repeat
   padding: 57px 0 137px 0
   position: relative
   &_img
@@ -280,6 +307,91 @@ nav
     width: 100%
     background: #070716
     z-index: 1
+
+//.workout
+//  padding: 25px 0 50px 0
+//  button
+//    height: 50px
+//    width: 150px
+//    border-radius: 4px
+//    border: none
+//    background-color: green
+//    margin-bottom: 25px
+//    text-transform: uppercase // все буквы заглавные
+//    color: white
+//    cursor: pointer // для использования курсора (рука)
+//    transition: 0.3s all // используется для замедления смены изображения
+//    outline: none
+//    &:hover
+//      background-color: green
+//      color: #222222
+//    &:active
+//      background-color: #6c757d
+//      color: white
+//    &:focus
+//      background-color: blueviolet
+//      color: white
+//  .circle
+//    height: 75px
+//    width: 75px
+//    background-color: blueviolet
+//
+//    border-radius: 100%
+//    margin-bottom: 25px
+//    transition: 0.5s all
+//    &:before
+//      content: ''
+//      display: block
+//      height: 5px
+//      width: 0%
+//      background-color: mediumpurple
+//      transition: 0.5s all
+//    &:hover
+//      &:before
+//        width: 100%
+
+.require
+  padding: 66px 0 87px 0
+  &_block
+    margin: 33px 0
+    &_nmb
+      margin-bottom: 0px
+  &_title
+    font-weight: 400
+    font-size: 22px
+    color: #1CA8C3
+    margin-bottom: 20px
+  &_list
+    list-style-type: none
+    padding-left: 50px
+    li
+      position: relative
+      font-weight: 300
+      font-size: 17px
+      line-height: 24px
+      margin-bottom: 10px
+      &:before
+        content: ''
+        display: block
+        position: absolute
+        left: -34px
+        top: 2px
+        width: 21px
+        height: 20px
+        background: url("../icon/check_blue 1.svg") center center / cover no-repeat
+  &_descr
+    font-weight: 300
+    font-size: 17px
+    line-height: 24px
+    color: $var5
+  .warning
+    .require_title
+      color: $var7
+    .require_list
+      li
+        &:before
+          background: url("../icon/check_red 5.svg") center center / cover no-repeat
+
 
 
 
